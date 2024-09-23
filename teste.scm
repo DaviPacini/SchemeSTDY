@@ -13,6 +13,9 @@
 (newline)
 (write a) ;Preserva as aspas
 (newline)
+(car a)  ; retorna o Primeiro elemento da lista
+(cdr a)  ; retorna o restante dos elementos
+(newline)
 
 ;função de primeira classe
 (define (funcao x y)
@@ -29,3 +32,8 @@
 (newline)
 (funcao lado_quadrado entrada)
 (newline)
+
+;recursão
+(define (fatorial n)
+  (if (= n 0) 1
+      (* n (fatorial (- n 1)))))
